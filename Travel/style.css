@@ -1,6 +1,9 @@
 html{
     margin: 0px;
 }
+p{
+    margin: 0;
+}
 body{
     margin: 0px;
     font-family: 'Red Hat Text', sans-serif;
@@ -8,7 +11,6 @@ body{
 .wrapper{
     margin: 0px;
     min-height: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -48,16 +50,80 @@ box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 .login p{
     text-align: center;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 41px;
-    color: #FFFFFF;
-
+    color: white;
 }
-.main{}
+.main{
+
+    background-color: gray;///убрать. для проверки
+}
 .main-row{
     flex: 1 1 auto;
+ }
+ .preview{
+    height: 774px;
+ }
+ .plan-trip{
+ width: 892px;
+ height: 422px;
+ margin: 32px 559px 230px 120px;
+ display: block;
+ }
+ .preview h1{
+font-family: 'Aleo', serif;;
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 96px;
+color: #FFFFFF;
+margin : 0px 0px 0px 0px ;
+ }
+ .preview p{
+    font-family: 'Aleo', serif;;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;   
+    color: #FFFFFF;
+    margin: 46px 0px;
+ }
+ .plan-trip-search{
+ width: 892px;
+ height: 95px;
+ background: rgba(255, 255, 255, 0.7);
+ border-radius: 16px;
+ }
+ .plan-trip-search-text p{
+padding: 32px 0px 41px 41px;
+font-family: 'Aleo', serif;;
+font-style: italic;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+color: #F2785C;
+ }
+ .plan-trip-search-button{
+position: relative;
+left: 646px;
+bottom: 130px;
+width: 228px;
+height: 59px;
+background: #0D606F;
+box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08);
+border-radius: 10px;
+margin: 0px 18px 0px 0px;
+
+ }
+ .plan-trip-search-button p{
+font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+text-align: center;
+line-height: 59px;
+color: #FFFFFF;
  }
 .footer{}
 .footer-row{}
