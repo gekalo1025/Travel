@@ -14,6 +14,8 @@ body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+
 }
 .container {
     max-width: 1440px;
@@ -22,8 +24,15 @@ body{
 .header{
 height: 90px;
 margin: 0px;
-background-color: rgba(242 ,120 ,92, 0.7);
 box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+background-image:url('./assets/img/background-mountains.jpg');
+background-repeat: no-repeat;
+background-position: center 0;
+
+
+}
+.header-conteiner{
+    background-color: rgba(242 ,120 ,92, 0.7) ;
 }
 .header-row{
     height: 90px;
@@ -42,21 +51,21 @@ box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     line-height: 21px;
     transition: .3s;
 }
-.login{
-    width: 103px;
-    height: 41px;
-    background: #0D606F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    text-align: center;
-
-}
+ 
 .login-btn{
     font-weight: 500;
     font-size: 16px;
     line-height: 41px;
     color: white;
-    text-decoration: none;
+    width: 103px;
+    height: 41px;
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+
 
 }
 .main{}
@@ -65,13 +74,15 @@ box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
  }
  .preview{
     height: 774px;
-    background-color: gray;///убрать. для проверки
+    background: url('./assets/img/background-mountains.jpg');
+    background-repeat: no-repeat;
+    background-position: center -90px;
  }
  .plan-trip{
  width: 892px;
  height: 422px;
- margin: 32px 559px 230px 120px;
- display: block;
+ padding: 32px 559px 230px 120px;
+
  }
  .preview h1{
 font-family: 'Aleo', serif;;
@@ -107,6 +118,14 @@ line-height: 29px;
 color: #F2785C;
  }
  .plan-trip-search-btn{
+
+
+
+
+ }
+ .search-btn{
+font-family: inherit;
+font-style: normal;
 position: relative;
 left: 646px;
 bottom: 130px;
@@ -116,19 +135,14 @@ background: #0D606F;
 box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08);
 border-radius: 10px;
 margin: 0px 18px 0px 0px;
-text-align: center;
-transition: .3s;
-
- }
- .search-btn{
-font-family: 'Red Hat Text';
-font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 59px;
 color: #FFFFFF;
 text-decoration: none;
+border: 0;
 transition: .3s;
+cursor: pointer;
  }
  .steps{
     height: 415px;
@@ -137,6 +151,7 @@ transition: .3s;
 width: 1177px; 
 height: 247px;
 margin :71px 132px 97px 131px;
+
 
  }
  .steps-text h2{
@@ -165,6 +180,65 @@ color: #0D606F;
 }
 .aligncenter{
     text-align: center;
+}
+.destinations{
+    height: 1042px;
+}
+.distination-text{
+    margin-bottom: 46px;
+    font-family: 'Red Hat Text';
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+.distination-carousel{
+display: flex;
+justify-content: space-between;
+}
+
+.img-carousel-1{
+order: 0;
+}
+.img-carousel-2{
+order: 1;
+margin: 0px 60px;
+}
+.img-carousel-3{
+order: 2;
+}
+.distination-switch{
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+.distination-btn{
+display: flex;
+width: 228px;
+height: 59;
+background: #0D606F;
+box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08);
+border-radius: 10px;
+margin: 0px auto;
+}
+.distination-btn img {
+    padding: 10px 10px 10px 31px;
+
+}
+.distination-btn-1{
+background: #0D606F;
+font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+color: #FFFFFF;
+text-decoration: none;
+cursor: pointer;
+border: 0;
+
+
+
 }
 
 .footer{}
