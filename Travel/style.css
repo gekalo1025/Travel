@@ -1,0 +1,63 @@
+html{
+    margin: 0px;
+}
+body{
+    margin: 0px;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.wrapper{
+    margin: 0px;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: 1440px;
+    margin: 0px auto;
+}
+.header{
+height: 90px;
+margin: 0px;
+background-color: rgba(242 ,120 ,92, 0.7);
+box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+}
+.header-row{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.menu-nav ul li{
+    padding-right: 42px;
+    display: inline;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+}
+.login{
+    width: 103px;
+    height: 41px;
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+}
+.login p{
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 41px;
+    color: #FFFFFF;
+
+}
+.main{}
+.main-row{
+    flex: 1 1 auto;
+ }
+.footer{}
+.footer-row{}
