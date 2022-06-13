@@ -1,5 +1,6 @@
 html{
     margin: 0px;
+    scroll-behavior: smooth; 
 }
 p{
     margin: 0;
@@ -39,6 +40,7 @@ box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     color: white;
     font-size: 16px;
     line-height: 21px;
+    transition: .3s;
 }
 .login{
     width: 103px;
@@ -46,24 +48,24 @@ box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     background: #0D606F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    text-align: center;
 
 }
-.login p{
-    text-align: center;
+.login-btn{
     font-weight: 500;
     font-size: 16px;
     line-height: 41px;
     color: white;
-}
-.main{
+    text-decoration: none;
 
-    background-color: gray;///убрать. для проверки
 }
+.main{}
 .main-row{
     flex: 1 1 auto;
  }
  .preview{
     height: 774px;
+    background-color: gray;///убрать. для проверки
  }
  .plan-trip{
  width: 892px;
@@ -104,7 +106,7 @@ font-size: 24px;
 line-height: 29px;
 color: #F2785C;
  }
- .plan-trip-search-button{
+ .plan-trip-search-btn{
 position: relative;
 left: 646px;
 bottom: 130px;
@@ -114,16 +116,56 @@ background: #0D606F;
 box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08);
 border-radius: 10px;
 margin: 0px 18px 0px 0px;
+text-align: center;
+transition: .3s;
 
  }
- .plan-trip-search-button p{
+ .search-btn{
 font-family: 'Red Hat Text';
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
-text-align: center;
 line-height: 59px;
 color: #FFFFFF;
+text-decoration: none;
+transition: .3s;
  }
+ .steps{
+    height: 415px;
+ }
+ .steps-block{
+width: 1177px; 
+height: 247px;
+margin :71px 132px 97px 131px;
+
+ }
+ .steps-text h2{
+margin: 0px 0px 40px 0px;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 53px;
+color: #F2785C;
+}
+.steps-icons{
+display: flex;
+justify-content: space-around;
+}
+.steps-icons p{
+text-align: center;
+font-family: 'Aleo' serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+color: #0D606F;
+}
+.aligncenter{
+    text-align: center;
+}
+
 .footer{}
 .footer-row{}
