@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Travel Portal</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="index.js"></script>
     <link rel="icon" href="./assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,16 +26,23 @@
                     <div class="header-row">
                         <div class="logo">
                             <div class="logo-img">
-                                <img src="./assets/svg/logo.svg" alt="logo">
+                                <img  class="logo-img-mobile" src="./assets/svg/logo-mobile.svg" alt="logo">
+                                <img class="logo-img-desktop" src="./assets/svg/logo.svg" alt="logo">
                             </div>
+                        </div>
+                        <div class="header-burger">
+                            <span></span>
                         </div>
                         <div class="menu">
                             <nav class="menu-nav">
                                 <ul>
+                                    <img class="image-close" src="./assets/svg/clarity_window-close-line.svg" alt="close">
                                     <li><a href="#how-it-work">How It Works</a></li>
                                     <li><a href="#plan-your-trip">Plan Your Trip</a></li>
                                     <li><a href="#destinations">Destinations</a></li>
                                     <li><a href="#travel-stories">Travel Stories</a></li>
+                                    <li class="menu-account" ><a href="#">Account</a></li>
+                                    <li class="menu-social-media"><a href="#social-media">Social Media</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -56,7 +64,7 @@
                         <div class="plan-trip">
                             <div class="plan-trip-text">
                                 <h1>Explore the beauty of the World</h1>
-                                <p>Recieve personalized recommendations for countries, hotels, activities and more</p>
+                                <p class="textp" >Recieve personalized recommendations for countries, hotels, activities and more</p>
                             </div>
                             <div class="plan-trip-search-row">
                                 <div class="plan-trip-search">
@@ -78,16 +86,16 @@
                         </div>
                         <div class="steps-icons">
                             <div class="steps-icons-1">
-                                <p class="aligncenter"><img src="./assets/svg/icons-bike.svg" alt="icons-bike"></p>
+                                <p ><img src="./assets/svg/icons-bike.svg" alt="icons-bike"></p>
                                 <p>Tell us what you want to do</p>
                             </div>
                             <div class="steps-icons-2">
-                                <p class="aligncenter"><img src="./assets/svg/icons-calendar.svg" alt="icons-calendar">
+                                <p><img src="./assets/svg/icons-calendar.svg" alt="icons-calendar">
                                 </p>
                                 <p>Share us preferable dates</p>
                             </div>
                             <div class="steps-icons-3">
-                                <p class="aligncenter"><img src="./assets/svg/icons-airplane.svg" alt="icons-airplane">
+                                <p ><img src="./assets/svg/icons-airplane.svg" alt="icons-airplane">
                                 </p>
                                 <p>We will give you recommendations</p>
                             </div>
@@ -126,84 +134,53 @@
                                 <div class="story-column">
                                     <div class="story">
                                         <div class="story-img">
-                                            <img src="./assets/img/story-1.jpg" alt="story-1">
+                                            <img class="story-img-1" src="./assets/img/story-1.jpg" alt="story-1">
                                         </div>
                                         <div class="story-text-column">
                                             <div class="story-caption">
-                                                <h3>10 Photos of Attractive Thailand</h3>
+                                                <h3 class="story-caption-1">10 Photos of Attractive Thailand</h3>
                                             </div>
                                             <div class="story-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-                                                    dolor sit amet, consectetur adipiscing elit... <a href="">Read
-                                                        More</a></p>
+                                                <p class="story-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...<a href="">ReadMore</a></p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="story">
                                         <div class="story-img">
-                                            <img src="./assets/img/story-2.jpg" alt="story-2">
+                                            <img class="story-img-2" src="./assets/img/story-2.jpg" alt="story-2">
                                         </div>
                                         <div class="story-text-column">
                                             <div class="story-caption">
-                                                <h3>Canyonlands National Park, Utah</h3>
+                                                <h3 class="story-caption-2">Canyonlands National Park, Utah</h3>
                                             </div>
                                             <div class="story-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-                                                    dolor sit amet, consectetur adipiscing elit... <a href="">Read
-                                                        More</a></p>
+                                                <p class="story-body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...<a href="">ReadMore</a></p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="story">
                                         <div class="story-img">
-                                            <img src="./assets/img/story-3.jpg" alt="story-3">
+                                            <img class="story-img-3" src="./assets/img/story-3.jpg" alt="story-3">
                                         </div>
                                         <div class="story-text-column">
                                             <div class="story-caption">
-                                                <h3>I left my heart in the Mountains!</h3>
+                                                <h3 class="story-caption-3">I left my heart in the Mountains!</h3>
                                             </div>
                                             <div class="story-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-                                                    dolor sit amet, consectetur adipiscing elit... <a href="">Read
-                                                        More</a></p>
+                                                <p class="story-body-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...<a href="">ReadMore</a></p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="story">
                                         <div class="story-img">
-                                            <img src="./assets/img/story-4.jpg" alt="story-4">
+                                            <img class="story-img-4" src="./assets/img/story-4.jpg" alt="story-4">
                                         </div>
                                         <div class="story-text-column">
                                             <div class="story-caption">
-                                                <h3>The Longest journey in my life!</h3>
+                                                <h3 class="story-caption-4">The Longest journey in my life!</h3>
                                             </div>
                                             <div class="story-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-                                                    dolor sit amet, consectetur adipiscing elit... Read More</p>
+                                                <p class="story-body-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...<a href="">ReadMore</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -227,7 +204,7 @@
                     <div class="footer-travel">
                         <p>All Rights Reserved © Travel Portal</p>
                     </div>
-                    <div class="footer-social-media">
+                    <div id="social-media" class="footer-social-media">
                         <ul>
                             <li><a href="https://rs.school/js-stage0/"><img src="./assets/svg/school.svg"
                                         alt="rs-school"></a></li>
