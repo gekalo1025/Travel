@@ -6,6 +6,9 @@ $(document).ready(function(){
  $('.menu a').click(function(event){
    $('.header-burger, .menu').removeClass('active');
 });
+ $('.main').click(function(event){
+   $('.header-burger, .menu').removeClass('active');
+});
 
 $('.image-close').click(function(event){
    $('.header-burger, .menu').removeClass('active');
