@@ -41,7 +41,8 @@ button {
 }
 
 .header-burger {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header-conteiner {
@@ -679,6 +680,9 @@ button {
 
 
 @media (max-width: 391px) {
+  html {
+    scroll-behavior: smooth;
+  }
   .wrapper {
     max-height: 1475px;
     margin: 0px 2px;
@@ -727,19 +731,19 @@ button {
 
   .menu {
     position: absolute;
-    top: -1000%;
+    top: -1000px;
     left: 0;
     width: 165px;
     height: 250px;
     background: #F2785C;
     box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
     border-radius: 10px;
+    transition: 0.8s;
     z-index: 2;
-    transition: 0.5s;
   }
 
   .menu.active {
-    transition: 0.5s;
+    transition: 0.6s;
     top: -30px;
     z-index: 3;
   }
@@ -761,8 +765,9 @@ button {
   }
 
   .menu nav .image-close {
-text-align: left;
-padding-left: 6px;
+    display: block;
+    text-align: left;
+    padding-left: 6px;
   }
 
   .menu-social-media a {
@@ -813,7 +818,8 @@ padding-left: 6px;
   }
 
   .header-burger {
-    display: block;
+    opacity: 1;
+    visibility: visible;
     position: relative;
     width: 35px;
     height: 32px;
