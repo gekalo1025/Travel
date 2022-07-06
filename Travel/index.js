@@ -6,6 +6,7 @@ $(document).ready(function () {
    });
    $('.menu a').click(function (event) {
       $('.header-burger, .menu').removeClass('active');
+      
    });
    $('.main').click(function (event) {
       $('.header-burger, .menu').removeClass('active');
@@ -29,10 +30,10 @@ window.addEventListener("load", function() {
     document.addEventListener("click",loginPopup )//событие клик на весь документ и выполнение функции loginPopup
      //функция loginPopup = открытие по кнопку логин и закрытие при нажатии вне окна popup
     function loginPopup(event){
-       if(event.target.closest('.login')){
+       if(event.target.closest('.login , .menu-account, .popup .image-close')){
            popup.classList.toggle('active');
        }
-       if(!event.target.closest('.popup, .login')){
+       if(!event.target.closest('.popup, .login, .menu-account')){
            popup.classList.remove('active');
        }
    
@@ -68,45 +69,67 @@ window.addEventListener("load", function() {
        }
    
    });
-   ///////////Карусель в секции distinations/////////////
-   let images = document.querySelectorAll('.distination-carousel img');
-   let nextImg = document.querySelector('.img-carousel-3');
-   let backImg = document.querySelector('.img-carousel-1');
-   
-   let next = function(){
-       let i = 0; 
-       let x = 1;
-       let y = 2;
-       let z = 0;
-   if(x>2){
-       x=0
-   }else if(i>2){
-       i=0
+   ///////////Карусель в секции distinations mobile/////////////
+
+   let images = document.querySelectorAll('.distination-carousel .img-mobile');
+   let nextImg = document.querySelector('.arrow-sliyder-rigth');
+   let dots = document.querySelectorAll('.dot');
+   let backImg = document.querySelector('.arrow-sliyder-left');
+   let index = 0;
+   //проверка есть ли на первом слайде класс актив,если нет то добавить.Функция нужна,чтобы задать первый текущий слайд
+   if(!images[0].classList.contains('active')){
+      images[0].classList.add('active');
+      dots[0].classList.add('active');
+
    }
-   if(y>2){
-       y=0
+   // активный слайд. Удаляет класс актив со всех слайдов и назначает класс актив текущему
+   const activSlide = n => {
+    for(slide of images){
+      slide.classList.remove('active');
+    }
+    images[n].classList.add('active');
    }
-       document.querySelector('.img-carousel-1').style.order = x+z ;
-       document.querySelector('.img-carousel-2').style.order = y+z ;
-       document.querySelector('.img-carousel-3').style.order = i+z ;
-       console.log(z)
-       
+   // активная точка. Удаляет класс актив со всех точек и назначает класс актив текущей
+   const activDots = n => {
+    for(dot of dots){
+      dot.classList.remove('active');
+    }
+    dots[n].classList.add('active');
    }
-   let back = function(){
-   let i=0;
-       if(i >= images.length){
-           i = 0; 
-       }
-       document.querySelector('.img-carousel-2').style.order = i;
-       document.querySelector('.img-carousel-1').style.order = i+3;
-       i=i+1;
-       console.log(i)
+
+   const nextSlide = () =>{    
+  if(index == images.length-1){
+   index= 0 ;
+   activSlide(index);
+   activDots(index);
+  }else{
+   index++;
+   activSlide(index);
+   activDots(index);
+  }
+}
+   const prevSlide = () =>{    
+  if(index == 0){
+   index= images.length-1 ;
+   activSlide(index);
+   activDots(index);
+  }else{
+   index--;
+   activSlide(index);
+   activDots(index);
+  }
    }
+   backImg.onclick = prevSlide;
+   nextImg.onclick =nextSlide;
    
-   backImg.onclick = back;
-   nextImg.onclick = next;
-   
-   
-   
-   
+
+   ////Карусель desktop//
+   // let imageDesktop = document.querySelectorAll('.distination-carousel .img-desktop');
+   // let next = document.querySelector('.img-carousel-3');
+   // let back = document.querySelector('.img-carousel-1');
+   // let activOrder = 1;
+   //  function next(){
+
+
+   //  }
    });
