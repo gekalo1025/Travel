@@ -124,12 +124,49 @@ window.addEventListener("load", function() {
    
 
    ////Карусель desktop//
-   // let imageDesktop = document.querySelectorAll('.distination-carousel .img-desktop');
-   // let next = document.querySelector('.img-carousel-3');
-   // let back = document.querySelector('.img-carousel-1');
-   // let activOrder = 1;
-   //  function next(){
+   let imageDesktop = document.querySelectorAll('.img-desktop');
+   let cityImages = document.querySelectorAll('.text-carousel');
+   let next = document.querySelector('.img-carousel-3');
+   let back = document.querySelector('.img-carousel-1');
+   let i =0;
+   console.log(cityImages)
+   const activSlideDesktop = n => {
+      for(let slide of cityImages){
+        slide.classList.remove('active');
+      }
+      cityImages[n].classList.add('active');
 
+     }
+///переделать акнивные точки(работает некорректно)
+    function nextDesktopSlider(){
+       for(let key of imageDesktop){
+          let indexSrc =  key.getAttribute('src')[25];
+        if(indexSrc == imageDesktop.length){
+           indexSrc=1;
+           activDots(indexSrc-1);
+         key.src= `./assets/img/Destination-${indexSrc}.jpg`;
+        }else{
+           indexSrc++;
+           activDots(indexSrc-1);
+           key.src= `./assets/img/Destination-${indexSrc}.jpg`;
 
-   //  }
+        }
+   }
+    }
+    function backDesktopSlider(){
+       for(let key of imageDesktop){
+          let indexSrc =  key.getAttribute('src')[25];
+        if(indexSrc == 1){
+         indexSrc=imageDesktop.length;
+         activDots(indexSrc-1);
+         key.src= `./assets/img/Destination-${indexSrc}.jpg`;
+        }else{
+           indexSrc--;
+           activDots(indexSrc-1);
+           key.src= `./assets/img/Destination-${indexSrc}.jpg`;
+        }
+   }
+    }
+    back.onclick = backDesktopSlider;
+    next.onclick = nextDesktopSlider;
    });

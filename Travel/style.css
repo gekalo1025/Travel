@@ -1,3 +1,11 @@
+@keyframes fade {
+  from{
+    width: 0px;
+  }
+  to{
+    width: 100%;
+  }
+}
 html {
   margin: 0px;
   scroll-behavior: smooth;
@@ -539,6 +547,9 @@ left: 0px;
   line-height: 42px;
   color: #FFFFFF;
 }
+.text-carousel.active{
+
+}
 
 
 .distination-text h2 {
@@ -569,6 +580,10 @@ left: 0px;
   display: inline-block;
   
 }
+.dot.active{
+  transition: 1s;
+  background-color: red;
+}
   
 .circles{
   margin: 26px 0px 40px 0px;
@@ -598,6 +613,7 @@ left: 0px;
 
 
 .img-carousel-1 {
+  cursor: pointer;
   position: relative;
     order: 0;
     margin: 0px 30px;
@@ -610,6 +626,7 @@ left: 0px;
 }
 
 .img-carousel-3 {
+  cursor: pointer;
   position: relative;
   margin: 0px 30px;
   order: 2;
@@ -1338,14 +1355,6 @@ color: #FFFFFF;
     transition: 1s;
     animation-name: fade;
     animation-duration: 1s;
-  }
-  @keyframes fade {
-    from{
-      width: 0px;
-    }
-    to{
-      width: 100%;
-    }
   }
   .distination-carousel .img-desktop{
     display: none;
