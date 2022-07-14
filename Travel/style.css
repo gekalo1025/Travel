@@ -495,6 +495,7 @@ button {
 
 
 .story-img img {
+  filter: drop-shadow(0px 4px 4px #0D606F);
   border-radius: 16px;
 }
 
@@ -685,9 +686,11 @@ button {
   }
   .wrapper {
     max-height: 1475px;
-    margin: 0px 2px;
+    margin: 0px auto;
   }
-
+  .container{
+   max-width: 390px;
+  }
   .main {
     position: relative;
     top: -30px;
@@ -743,12 +746,13 @@ button {
   }
 
   .menu.active {
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
     transition: 0.6s;
     top: -30px;
     z-index: 3;
   }
 
-  .header-burger.active:before {
+  /* .header-burger.active:before {
     transform: rotate(45deg);
     top: 14.7px;
   }
@@ -762,7 +766,7 @@ button {
   .header-burger.active span {
     transform: scale(0);
 
-  }
+  } */
 
   .menu nav .image-close {
     display: block;
@@ -789,16 +793,6 @@ button {
     padding-right: 15px;
     margin: 0;
     height: 32px;
-  }
-
-  .destinations-menu {
-    position: relative;
-    bottom: 32px;
-  }
-
-  .plan-menu {
-    position: relative;
-    top: 32px;
   }
 
   .menu nav li {
@@ -1183,8 +1177,10 @@ button {
   }
 
   .story-img img {
+
     height: 134px;
     width: 159px;
+    filter: drop-shadow(0px 4px 4px #0D606F);
   }
 
   .story-img {
@@ -1266,6 +1262,14 @@ button {
     left: 0px;
 
   }
+ .header{
+  left:0;
+  width: 320px;
+ }
+ .logo-img {
+
+  right: 80px;
+ }
 
   .header-burger {
     left: 40px
