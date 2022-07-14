@@ -19,6 +19,13 @@ $(document).ready(function () {
 });
 
 window.addEventListener("load", function() {
+   if (window.innerWidth <= 390) {
+      document.querySelector(".story-img-1").src = "./assets/img/story-1mobile.jpg";
+      document.querySelector(".story-img-2").src = "./assets/img/story-2mobile.jpg";
+      document.querySelector(".story-img-3").src = "./assets/img/story-3mobile.jpg";
+      document.querySelector(".story-img-4").src = "./assets/img/story-4mobile.jpg";
+    }
+   
 
    const popupButton = document.querySelector('.popup__Button');
    const buttonLogin = document.querySelector('.login');
