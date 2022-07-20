@@ -1042,10 +1042,9 @@ button {
     margin: 0px auto;
   }
 
-  .container {
-    max-width: 390px;
+  .container{
+   max-width: 390px;
   }
-
   .main {
     position: relative;
     top: -30px;
@@ -1654,6 +1653,14 @@ button {
     left: 0px;
 
   }
+ .header{
+  left:0;
+  width: 320px;
+ }
+ .logo-img {
+
+  right: 80px;
+ }
 
   .header {
     left: 0;
